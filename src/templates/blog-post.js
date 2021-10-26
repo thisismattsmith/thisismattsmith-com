@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <br/>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-          <Bio />
+        <small>Published {post.frontmatter.date}</small>
         </footer>
       </article>
       <nav className="blog-post-nav">
